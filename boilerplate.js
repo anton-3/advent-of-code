@@ -12,9 +12,6 @@ function getfilelines(filename) {
 
 function md5(string) {
     let hash = crypto.createHash('md5').update(string).digest('hex')
-    for (let i = 0; i < 2016; i++) {
-        hash = crypto.createHash('md5').update(hash).digest('hex')
-    }
     return hash
 }
 
